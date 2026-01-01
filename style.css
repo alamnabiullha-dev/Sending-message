@@ -1,7 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url("nabi.jpg");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .contact-container {
