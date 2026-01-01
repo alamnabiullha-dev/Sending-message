@@ -16,6 +16,22 @@ Message:
 ${message}
     `;
 
-    window.location.href = 
-        `mailto:alamnabiullha@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailBody)}`;
+    fetch("https://formspree.io/f/mnjnnvzw", {
+        method: "POST",
+        headers: {
+            "Accept": "application/json"
+        },
+        body: new FormData(this)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("✅ Message sent successfully!");
+            this.reset();
+        } else {
+            alert("❌ Failed to send message");
+        }
+    })
+    .catch(() => {
+        alert("❌ Network error");
+    });
 });
