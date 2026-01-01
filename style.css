@@ -2,11 +2,13 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url("nabi.jpg");
-    background-size: cover;
+    background-size: cover;        /* fills screen on all devices */
     background-repeat: no-repeat;
-    background-position: center;
-    min-height: 90vh;
+    background-position: center center;
+    height: 100vh;                 /* full viewport height */
+    width: 100vw;
 }
+
 
 .contact-container {
     width: 350px;
